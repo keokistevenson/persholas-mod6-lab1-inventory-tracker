@@ -1,3 +1,4 @@
+import { calculateTax } from "./utils/taxCalculator";
 import { DigitalProduct } from "./models/DigitalProduct";
 import { PhysicalProduct } from "./models/PhysicalProduct";
 import { Product } from "./models/Product";
@@ -12,3 +13,6 @@ const dp: DigitalProduct = new DigitalProduct("DP2345", "PDF", 3.50, 50);
 console.log(dp.displayDetails());
 
 console.log(dp.formattedFileSize);
+
+console.log(calculateTax(product));
+console.log(calculateTax(dp));
