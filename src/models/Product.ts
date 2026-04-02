@@ -1,16 +1,14 @@
 
 
-class Product {
+export abstract class Product {
 
-    sku: string;
-    name: string;
-    price: number;
+    // public interface
+    contructor(public sku: string, public name: string, public price: number) { } // smple property assignment
 
     displayDetails(): string {
-        return ``;
+        return `${this.name} (SKU: ${this.sku}) - $${this.price.toFixed(2)}`;
     }
 
-    getPriceWithTax(): number {
-        
-    }
+    // looks like this will be implemented later.  I could put functionality now and alter it later but why?
+    abstract getPriceWithTax(): number;
 }
