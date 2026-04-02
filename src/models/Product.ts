@@ -3,7 +3,7 @@
 export abstract class Product {
 
     // public interface
-    contructor(public sku: string, public name: string, public price: number) { } // smple property assignment
+    constructor(public sku: string, public name: string, public price: number) { } // smple property assignment
 
     displayDetails(): string {
         return `${this.name} (SKU: ${this.sku}) - $${this.price.toFixed(2)}`;
